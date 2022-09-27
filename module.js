@@ -1,5 +1,4 @@
-
-import { Contenedor } from "./utils.js"
+const Contenedor = require("./utils.js")
 
 const salvarProductos = async () => {
     
@@ -46,4 +45,4 @@ let object3 =         {
     "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
 }
 
-export default { buscarTodos, buscarPorId }
+module.exports = { buscarTodos, buscarPorId }

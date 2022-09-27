@@ -18,7 +18,7 @@ Servidor con express para devolver objetos generados con fs
   ## Installation
   
   
-Descargar repositorio y correr servidor o visitar el url:
+Descargar repositorio y correr servidor o visitar el url [Glitch](https://sable-cloudy-truffle.glitch.me)
 
   
   ## Usage
@@ -27,8 +27,6 @@ Descargar repositorio y correr servidor o visitar el url:
 Seguir instrucciones de instalación y probar las rutas /productos y /productoRandom
 
   
-  
-![Servidor con Express webpage working as expected](assets/images/screenshot.png)
   
   ## License
   

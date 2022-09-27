@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+const fs = require("fs")
 
 class Contenedor {
     constructor(nombre) {
@@ -105,4 +105,4 @@ class Contenedor {
     }
 }
 
-export {Contenedor}
+module.exports = Contenedor
