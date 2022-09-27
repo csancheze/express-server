@@ -1,0 +1,49 @@
+
+import { Contenedor } from "./utils.js"
+
+const salvarProductos = async () => {
+    
+    const product1 = await Productos.save(object1)
+    const product2 = await Productos.save(object2)
+    const product3 = await Productos.save(object3)
+}
+    
+const buscarPorId = async (id) => {
+    
+    let resultado = await Productos.getById(id)
+        return resultado
+    
+}
+    
+const buscarTodos = async () => {
+    let arreglo = await Productos.getAll()
+    return arreglo
+}
+    
+const borrarTodos = async () => {
+    await Productos.deleteAll()
+}
+    
+const borrarPorId = async (id) => {
+    await Productos.deleteById(id)
+}
+    
+const Productos = new Contenedor("productos.txt")
+    
+let object1 = {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+}
+    let object2 =         {
+    "title": "Calculadora",
+    "price": 234.56,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+}
+let object3 =         {
+    "title": "Globo Terráqueo",
+    "price": 345.67,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+}
+
+export default { buscarTodos, buscarPorId }
