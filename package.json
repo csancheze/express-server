@@ -2,10 +2,10 @@
   "name": "desafio-3",
   "version": "1.0.0",
   "description": "servidor con express",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "César Sánchez",
   "license": "ISC",

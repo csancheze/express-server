@@ -37,6 +37,7 @@ class Contenedor {
         let file = ""
         try {
             file = await fs.promises.readFile(`./${this.nombre}`, "utf-8")
+         
             arr = JSON.parse(file)
             object = arr.find(element => element.id === id)
         } catch (error) {
@@ -57,6 +58,38 @@ class Contenedor {
         }
         arr = JSON.parse(file)
         return arr
+    }
+
+    
+    async updateById (id, body) {
+        let arr = []
+        let file = ""
+        let productToUpdate = {}
+        try {
+            file = await fs.promises.readFile(`./${this.nombre}`, "utf-8")
+            if (file) {
+                arr = JSON.parse(file)
+                productToUpdate = arr.findIndex(el=>el.id === id);
+            }
+        } catch (error) {
+            console.log("No se pudieron leer los productos", error)
+            return
+        }
+
+        arr[productToUpdate] = {
+            id:id,
+            ...body
+        };
+
+        try {
+            await fs.promises.writeFile(`./${this.nombre}`, JSON.stringify(arr))
+        } catch (error) {
+            console.error("No se pudo actualizar el producto", error)
+            return
+        } 
+
+        console.log(`El objeto ha sido actualizado.`)
+        return  arr[productToUpdate]
     }
 
     async deleteById (id) {
@@ -81,12 +114,14 @@ class Contenedor {
         
         try {
             await fs.promises.writeFile(`./${this.nombre}`, JSON.stringify(newArr))
+            console.log(`El producto con id ${id} ha sido borrado`)
+            return `El producto con id ${id} ha sido borrado`
         } catch (error) {
             console.error("No se hicieron cambios.", error)
             return
         }
 
-        console.log(`El producto con id ${id} ha sido borrado`)
+  
     }
 
 

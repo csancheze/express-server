@@ -13,6 +13,16 @@ const buscarPorId = async (id) => {
         return resultado
     
 }
+
+const agregarProducto = async (obj) => {
+    let resultado = await Productos.save(obj)
+    return resultado
+}
+
+const actualizarPorId = async (id, body) => {
+    let resultado = await Productos.updateById(id,body)
+    return resultado
+}
     
 const buscarTodos = async () => {
     let arreglo = await Productos.getAll()
@@ -25,6 +35,7 @@ const borrarTodos = async () => {
     
 const borrarPorId = async (id) => {
     await Productos.deleteById(id)
+    return "Borrado"
 }
     
 const Productos = new Contenedor("productos.txt")
@@ -45,4 +56,4 @@ let object3 =         {
     "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
 }
 
-module.exports = { buscarTodos, buscarPorId }
+module.exports = { buscarTodos, buscarPorId, agregarProducto, actualizarPorId, borrarPorId }
