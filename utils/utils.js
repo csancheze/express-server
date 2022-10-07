@@ -11,7 +11,7 @@ class Contenedor {
             let file = await fs.promises.readFile(`./${this.nombre}`, "utf-8")
             if (file) {
                 arr = JSON.parse(file)
-                currentId = arr.at(-1).id
+                currentId = arr[arr-length -1].id
             }
         } catch (error) {
             console.log("Archivo no encontrado. El archivo se creara.", error)
