@@ -1,9 +1,8 @@
-# Servidor con Express ![MIT](https://img.shields.io/apm/l/vim-mode?style=plastic)
+#API RESTful ![MIT](https://img.shields.io/apm/l/vim-mode?style=plastic)
 
   ## Description
   
-  
-Servidor con express para devolver objetos generados con fs
+  API RESTful con endpoints y formulario
 
   
   ## Table of Contents
@@ -18,15 +17,32 @@ Servidor con express para devolver objetos generados con fs
   ## Installation
   
   
-Descargar repositorio y correr servidor o visitar los urls:
- [Todos los productos](https://sable-cloudy-truffle.glitch.me/productos)
- [Producto Aleatorio](https://sable-cloudy-truffle.glitch.me/productoRandom)
+Descargar repositorio y correr servidor. Usar postman con las siguientes rutas y  visita el url del formulario:
+ [Formulario](https://sable-cloudy-truffle.glitch.me/static/index.html)
+ GET https://sable-cloudy-truffle.glitch.me/api/productos/
+ GET https://sable-cloudy-truffle.glitch.me/api/productos/:id
+ POST https://sable-cloudy-truffle.glitch.me/api/productos/
+  Request Body
+  {
+  "title":"Nombre del producto" <string>
+  "precio" : 123 <int>
+  "thumbnail" "http://url.com/thumbnail.png" <string>
+  }
+ PUT https://sable-cloudy-truffle.glitch.me/api/productos/:id
+   Request Body
+  {
+  "title":"Nombre del producto" <string>
+  "precio" : 123 <int>
+  "thumbnail" "http://url.com/thumbnail.png" <string>
+  }
+ DELETE https://sable-cloudy-truffle.glitch.me/api/productos/:id
+ 
 
   
   ## Usage
   
   
-Seguir instrucciones de instalación y probar las rutas /productos y /productoRandom
+Seguir instrucciones de instalación y probar los endpoints
 
   
   
