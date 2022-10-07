@@ -18,23 +18,27 @@
   
   
 Descargar repositorio y correr servidor. Usar postman con las siguientes rutas y  visita el url del formulario:
- [Formulario](https://sable-cloudy-truffle.glitch.me/static/index.html)
- GET https://sable-cloudy-truffle.glitch.me/api/productos/
- GET https://sable-cloudy-truffle.glitch.me/api/productos/:id
- POST https://sable-cloudy-truffle.glitch.me/api/productos/
+ [Formulario](https://road-fossil-word.glitch.me/static/index.html)
+ - GET https://road-fossil-word.glitch.me/api/productos/
+ - GET https://road-fossil-word.glitch.me/api/productos/:id
+ - POST https://road-fossil-word.glitch.me/api/productos/
   Request Body
+  ```
   {
   "title":"Nombre del producto" <string>
   "precio" : 123 <int>
   "thumbnail" "http://url.com/thumbnail.png" <string>
   }
- PUT https://sable-cloudy-truffle.glitch.me/api/productos/:id
+  ```
+ - T https://sable-cloudy-truffle.glitch.me/api/productos/:id
    Request Body
+   ```
   {
   "title":"Nombre del producto" <string>
   "precio" : 123 <int>
   "thumbnail" "http://url.com/thumbnail.png" <string>
   }
+  ```
  DELETE https://sable-cloudy-truffle.glitch.me/api/productos/:id
  
 
