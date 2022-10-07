@@ -25,9 +25,9 @@ Descargar repositorio y correr servidor. Usar postman con las siguientes rutas y
     - Request Body
   ```
   {
-  "title":"Nombre del producto" <string>
-  "precio" : 123 <int>
-  "thumbnail" "http://url.com/thumbnail.png" <string>
+  "title":"Nombre del producto" //<string>
+  "precio" : 123 //<int>
+  "thumbnail" "http://url.com/thumbnail.png" //<string>
   }
   ```
  - PUT https://gabby-quilt-dugout.glitch.me/api/productos/:id
@@ -35,9 +35,9 @@ Descargar repositorio y correr servidor. Usar postman con las siguientes rutas y
    
   ```
   {
-  "title":"Nombre del producto" <string>
-  "precio" : 123 <int>
-  "thumbnail" "http://url.com/thumbnail.png" <string>
+  "title":"Nombre del producto" //<string>
+  "precio" : 123 //<int>
+  "thumbnail" "http://url.com/thumbnail.png" //<string>
   }
   ```
  - DELETE https://gabby-quilt-dugout.glitch.me/api/productos/:id
