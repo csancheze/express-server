@@ -30,7 +30,7 @@ Descargar repositorio y correr servidor. Usar postman con las siguientes rutas y
   "thumbnail" "http://url.com/thumbnail.png" <string>
   }
   ```
- - T https://sable-cloudy-truffle.glitch.me/api/productos/:id
+ - PUT https://sable-cloudy-truffle.glitch.me/api/productos/:id
    Request Body
    ```
   {
@@ -39,7 +39,7 @@ Descargar repositorio y correr servidor. Usar postman con las siguientes rutas y
   "thumbnail" "http://url.com/thumbnail.png" <string>
   }
   ```
- DELETE https://sable-cloudy-truffle.glitch.me/api/productos/:id
+ - DELETE https://sable-cloudy-truffle.glitch.me/api/productos/:id
  
 
   
